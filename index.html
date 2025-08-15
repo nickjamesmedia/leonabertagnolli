@@ -8,14 +8,14 @@
   <link rel="canonical" href="https://leonabertagnolli.ca/" />
   <meta name="theme-color" content="#012043" />
 
-  <!-- Fonts (lighter headers) -->
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Jomhuria&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600&family=Jomhuria&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --navy:#012043;      /* dark blue */
-      --light:#B9D3F0;     /* light blue */
-      --ink:#2B2F33;       /* near-black text */
+      --navy:#012043;
+      --light:#B9D3F0;
+      --ink:#2B2F33;
       --paper:#FFFFFF;
       --muted:#606B77;
       --card:#F5F7FA;
@@ -23,22 +23,20 @@
       --shadow:0 10px 30px rgba(0,0,0,.08);
       --max:1024px;
     }
-
     *{box-sizing:border-box}
     body{
       margin:0;
       font-family:"Josefin Sans", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
       color:var(--ink); background:var(--paper); line-height:1.6;
     }
-    /* Lighter, airier headers */
-    h1,h2{font-family:"Josefin Sans", sans-serif; font-weight:600; letter-spacing:.2px; margin:0}
+    h1,h2{font-family:"Josefin Sans", sans-serif; font-weight:500; letter-spacing:.2px; margin:0}
     a{color:var(--navy); text-underline-offset:3px}
     img{max-width:100%; display:block; height:auto}
     .container{max-width:var(--max); margin-inline:auto; padding:clamp(16px,3.5vw,32px)}
 
     /* Top bar */
     .top{display:flex; align-items:center; justify-content:space-between; gap:16px}
-    .brand{display:flex; align-items:center; gap:12px; font-weight:700; color:#fff}
+    .brand{display:flex; align-items:center; gap:12px; font-weight:600; color:#fff}
     .mark{
       width:40px; height:40px; border-radius:50%;
       overflow:hidden; flex:0 0 40px; border:2px solid #ffffff80;
@@ -46,25 +44,24 @@
     }
     .mark img{width:100%; height:100%; object-fit:cover}
 
-    /* HERO with background + parallax */
-    header{
-      position:relative; color:#fff;
-      background:#0b1f3a;
-    }
+    /* HERO section */
+    header{position:relative; color:#fff; background:#0b1f3a;}
     .hero{
       position:relative;
       min-height:56vh;
       display:grid; align-items:center;
-      background-image:
+      overflow:hidden;
+      background:#012043;
+    }
+    .hero::before{
+      content:"";
+      position:absolute; inset:0;
+      background:
         linear-gradient(to bottom, rgba(1,32,67,.75), rgba(1,32,67,.55)),
-        url("assets/website-header.jpg");
-      background-size:cover;
-      background-position:center;
-      background-attachment:fixed; /* simple parallax */
+        url("assets/website-header.jpg") center/cover no-repeat;
+      z-index:0;
     }
-    @media (prefers-reduced-motion: reduce){
-      .hero{background-attachment:scroll}
-    }
+    .hero .container{position:relative; z-index:1;}
     @media (max-width:900px){
       .hero{min-height:50vh}
     }
@@ -74,25 +71,23 @@
     }
     @media (max-width:900px){ .hero-grid{grid-template-columns:1fr} }
 
-    .eyebrow{font-weight:700; text-transform:uppercase; letter-spacing:.08em; opacity:.95}
+    .eyebrow{font-weight:600; text-transform:uppercase; letter-spacing:.08em; opacity:.95}
     h1{font-size:clamp(40px,7.5vw,80px); line-height:1.02; margin:.15rem 0 .35rem}
-    .tag{color:#e6f0ff; font-weight:700}
+    .tag{color:#e6f0ff; font-weight:500}
     .label{
-      display:inline-block; margin-top:10px; font-weight:700; color:#e6f0ff;
+      display:inline-block; margin-top:10px; font-weight:600; color:#e6f0ff;
       border-bottom:2px solid #e6f0ff; padding-bottom:2px;
     }
     .cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px}
     .btn{
       display:inline-flex; align-items:center; gap:8px; padding:12px 18px;
-      border-radius:10px; font-weight:800; text-decoration:none;
+      border-radius:10px; font-weight:700; text-decoration:none;
       background:#fff; color:var(--navy); box-shadow:var(--shadow); border:1px solid #e7eef7
     }
     .btn.secondary{background:transparent; color:#fff; border:2px solid #ffffff66}
 
-    /* Hero logo card layered on top of bg */
-    .hero-logo-wrap{
-      display:grid; place-items:center;
-    }
+    /* Hero logo card */
+    .hero-logo-wrap{display:grid; place-items:center;}
     .hero-logo{
       background:linear-gradient(135deg,var(--light),#dcebfb);
       border-radius:var(--radius);
@@ -156,7 +151,6 @@
     <div class="container top" role="navigation" aria-label="Primary">
       <div class="brand">
         <div class="mark" title="Leona Bertagnolli">
-          <!-- small icon (use the 2nd headshot) -->
           <img src="assets/LeonaBertagnollie_profilepic2.jpg" alt="Leona Bertagnolli">
         </div>
         <span>Leona&nbsp;Bertagnolli</span>
@@ -180,7 +174,6 @@
           </div>
         </div>
 
-        <!-- Logo over the header image -->
         <div class="hero-logo-wrap">
           <div class="hero-logo">
             <div class="hero-logo-inner">
@@ -201,9 +194,7 @@
           <p>Her priorities are straightforward: listen to residents, keep council accountable, and focus on responsible growth so Clearwater County stays a place we’re proud to call home.</p>
           <p class="lead"><strong>Ward:</strong> 3 • <strong>Location:</strong> Clearwater County, Alberta</p>
         </div>
-
         <div class="card">
-          <!-- larger profile photo in About -->
           <div class="about-headshot">
             <img src="assets/LeonaBertagnolli_profilepic.jpg" alt="Leona Bertagnolli headshot">
           </div>
@@ -218,25 +209,16 @@
           <ul class="contact-list">
             <li>
               <a href="tel:+14038465840">
-                <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.62 10.79a15.46 15.46 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.05-.24c1.15.38 2.39.59 3.54.59a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1A17 17 0 0 1 3 7a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.15.21 2.39.59 3.54a1 1 0 0 1-.24 1.05z"/></svg>
-                <span class="num">403-846-5840</span>
+                📞 <span class="num">403-846-5840</span>
               </a>
             </li>
             <li>
-              <a href="mailto:leonazone3@gmail.com">
-                <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 
-                2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m0 4-8 5L4 8V6l8 5 8-5z"/></svg>
-                leonazone3@gmail.com
-              </a>
+              <a href="mailto:leonazone3@gmail.com">✉️ leonazone3@gmail.com</a>
             </li>
             <li>
-              <a href="https://www.facebook.com/profile.php?id=61578824399349" target="_blank" rel="noopener">
-                <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 4.97 3.64 9.09 8.4 9.86v-6.98H7.9v-2.88h2.54V9.41c0-2.5 1.49-3.88 3.78-3.88 1.1 0 2.26.2 2.26.2v2.48h-1.27c-1.25 0-1.64.78-1.64 1.58v1.9h2.79l-.45 2.88h-2.34v6.98c4.76-.77 8.4-4.89 8.4-9.86 0-5.5-4.46-9.96-9.96-9.96z"/></svg>
-                Facebook
-              </a>
+              <a href="https://www.facebook.com/profile.php?id=61578824399349" target="_blank" rel="noopener">🌐 Facebook</a>
             </li>
           </ul>
-          <p class="small">Prefer email? Click the address above or use your mail app to write to Leona.</p>
         </div>
       </div>
     </section>
