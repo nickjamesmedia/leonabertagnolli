@@ -4,12 +4,30 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Leona Bertagnolli — Clearwater County, Ward 3</title>
-  <meta name="description" content="Contact Leona Bertagnolli and learn why she’s running for Clearwater County Council, Ward 3. Integrity • Stewardship • Accountability." />
+  <meta name="description" content="Leona Bertagnolli has lived, worked, farmed, and raised her family in Clearwater County for over three decades. Contact Leona and learn more about her priorities for Ward 3." />
+  <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://leonabertagnolli.ca/" />
   <meta name="theme-color" content="#012043" />
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600&family=Jomhuria&display=swap" rel="stylesheet">
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Leona Bertagnolli" />
+  <meta property="og:title" content="Leona Bertagnolli — Clearwater County, Ward 3" />
+  <meta property="og:description" content="Integrity • Stewardship • Accountability. Get in touch with Leona and read a short bio." />
+  <meta property="og:url" content="https://leonabertagnolli.ca/" />
+  <meta property="og:image" content="https://leonabertagnolli.ca/assets/website-header.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Leona Bertagnolli — Clearwater County, Ward 3" />
+  <meta name="twitter:description" content="Integrity • Stewardship • Accountability. Get in touch with Leona and read a short bio." />
+  <meta name="twitter:image" content="https://leonabertagnolli.ca/assets/website-header.jpg" />
+
+  <!-- Favicon (inline SVG) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23012043'/%3E%3Ctext x='50%25' y='58%25' text-anchor='middle' font-family='Arial,Helvetica,sans-serif' font-size='40' fill='white'%3ELB%3C/text%3E%3C/svg%3E">
+
+  <!-- Fonts (lighter headers), with preconnects -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root{
@@ -24,28 +42,38 @@
       --max:1024px;
     }
     *{box-sizing:border-box}
+    html:focus-within{scroll-behavior:smooth}
+    @media (prefers-reduced-motion: reduce){
+      html:focus-within{scroll-behavior:auto}
+      *{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important}
+    }
     body{
       margin:0;
       font-family:"Josefin Sans", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
       color:var(--ink); background:var(--paper); line-height:1.6;
     }
-    h1,h2{font-family:"Josefin Sans", sans-serif; font-weight:500; letter-spacing:.2px; margin:0}
     a{color:var(--navy); text-underline-offset:3px}
     img{max-width:100%; display:block; height:auto}
     .container{max-width:var(--max); margin-inline:auto; padding:clamp(16px,3.5vw,32px)}
+    h1,h2{font-weight:500; letter-spacing:.2px; margin:0}
+
+    /* Skip link */
+    .skip{position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden}
+    .skip:focus{position:static; width:auto; height:auto; padding:8px 12px; background:#fff; border:2px solid var(--navy); z-index:1000}
 
     /* Top bar */
+    header{background:#0b1f3a; color:#fff}
     .top{display:flex; align-items:center; justify-content:space-between; gap:16px}
-    .brand{display:flex; align-items:center; gap:12px; font-weight:600; color:#fff}
+    .brand{display:flex; align-items:center; gap:12px; font-weight:600}
     .mark{
       width:40px; height:40px; border-radius:50%;
       overflow:hidden; flex:0 0 40px; border:2px solid #ffffff80;
       box-shadow:0 2px 8px rgba(0,0,0,.2);
     }
     .mark img{width:100%; height:100%; object-fit:cover}
+    nav a{color:#fff; text-decoration:none; margin-left:18px; font-weight:600}
 
-    /* HERO section */
-    header{position:relative; color:#fff; background:#0b1f3a;}
+    /* HERO section (safe for all browsers) */
     .hero{
       position:relative;
       min-height:56vh;
@@ -61,23 +89,16 @@
         url("assets/website-header.jpg") center/cover no-repeat;
       z-index:0;
     }
-    .hero .container{position:relative; z-index:1;}
-    @media (max-width:900px){
-      .hero{min-height:50vh}
-    }
+    .hero .container{position:relative; z-index:1}
+    @media (max-width:900px){ .hero{min-height:50vh} }
 
-    .hero-grid{
-      display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(20px,5vw,40px);
-    }
+    .hero-grid{display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(20px,5vw,40px)}
     @media (max-width:900px){ .hero-grid{grid-template-columns:1fr} }
 
     .eyebrow{font-weight:600; text-transform:uppercase; letter-spacing:.08em; opacity:.95}
     h1{font-size:clamp(40px,7.5vw,80px); line-height:1.02; margin:.15rem 0 .35rem}
     .tag{color:#e6f0ff; font-weight:500}
-    .label{
-      display:inline-block; margin-top:10px; font-weight:600; color:#e6f0ff;
-      border-bottom:2px solid #e6f0ff; padding-bottom:2px;
-    }
+    .label{display:inline-block; margin-top:10px; font-weight:600; color:#e6f0ff; border-bottom:2px solid #e6f0ff; padding-bottom:2px}
     .cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px}
     .btn{
       display:inline-flex; align-items:center; gap:8px; padding:12px 18px;
@@ -86,20 +107,12 @@
     }
     .btn.secondary{background:transparent; color:#fff; border:2px solid #ffffff66}
 
-    /* Hero logo card */
-    .hero-logo-wrap{display:grid; place-items:center;}
-    .hero-logo{
-      background:linear-gradient(135deg,var(--light),#dcebfb);
-      border-radius:var(--radius);
-      padding:10px; box-shadow:var(--shadow);
-    }
-    .hero-logo-inner{
-      background:#fff; border-radius:calc(var(--radius) - 6px);
-      padding:clamp(12px,3vw,24px);
-      display:grid; place-items:center;
-    }
-    .hero-logo-inner img{
+    /* Hero logo (transparent PNG over background) */
+    .hero-logo-wrap{display:grid; place-items:center}
+    .hero-logo{ /* intentionally no background/border */ }
+    .hero-logo img{
       width:min(520px, 80vw); height:auto;
+      filter: drop-shadow(0 2px 6px rgba(0,0,0,.35)); /* not a background or border */
     }
 
     /* Sections */
@@ -147,15 +160,18 @@
   </script>
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
+
   <header>
-    <div class="container top" role="navigation" aria-label="Primary">
+    <div class="container top">
       <div class="brand">
         <div class="mark" title="Leona Bertagnolli">
-          <img src="assets/LeonaBertagnollie_profilepic2.jpg" alt="Leona Bertagnolli">
+          <!-- small icon (second headshot) -->
+          <img src="assets/LeonaBertagnollie_profilepic2.jpg" alt="Leona Bertagnolli" decoding="async">
         </div>
         <span>Leona&nbsp;Bertagnolli</span>
       </div>
-      <nav class="links">
+      <nav aria-label="Primary">
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -174,11 +190,10 @@
           </div>
         </div>
 
+        <!-- Transparent PNG logo over hero background -->
         <div class="hero-logo-wrap">
           <div class="hero-logo">
-            <div class="hero-logo-inner">
-              <img src="assets/website-header-leona-bertagnolli.png" alt="Leona Bertagnolli Logo">
-            </div>
+            <img src="assets/website-header-leona-bertagnolli.png" alt="Leona Bertagnolli wordmark logo" decoding="async">
           </div>
         </div>
       </div>
@@ -196,7 +211,7 @@
         </div>
         <div class="card">
           <div class="about-headshot">
-            <img src="assets/LeonaBertagnolli_profilepic.jpg" alt="Leona Bertagnolli headshot">
+            <img src="assets/LeonaBertagnolli_profilepic.jpg" alt="Leona Bertagnolli headshot" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
@@ -208,9 +223,7 @@
           <h2>Contact</h2>
           <ul class="contact-list">
             <li>
-              <a href="tel:+14038465840">
-                📞 <span class="num">403-846-5840</span>
-              </a>
+              <a href="tel:+14038465840">📞 <span class="num">403-846-5840</span></a>
             </li>
             <li>
               <a href="mailto:leonazone3@gmail.com">✉️ leonazone3@gmail.com</a>
@@ -219,6 +232,7 @@
               <a href="https://www.facebook.com/profile.php?id=61578824399349" target="_blank" rel="noopener">🌐 Facebook</a>
             </li>
           </ul>
+          <p class="small">Prefer email? Click the address above or use your mail app to write to Leona.</p>
         </div>
       </div>
     </section>
@@ -232,6 +246,7 @@
   </footer>
 
   <script>
+    // Non-essential, keeps footer current
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
