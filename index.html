@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -21,8 +21,10 @@
   <meta name="twitter:description" content="Integrity • Stewardship • Accountability. Get in touch with Leona and read a short bio." />
   <meta name="twitter:image" content="https://leonabertagnolli.ca/assets/website-header.jpg" />
 
-  <!-- Favicon (inline SVG) -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23012043'/%3E%3Ctext x='50%25' y='58%25' text-anchor='middle' font-family='Arial,Helvetica,sans-serif' font-size='40' fill='white'%3ELB%3C/text%3E%3C/svg%3E">
+  <!-- Favicon files -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="assets/favicon-32x32.png" sizes="32x32">
+  <link rel="alternate icon" type="image/png" href="assets/favicon-16x16.png" sizes="16x16">
 
   <!-- Fonts (lighter headers), with preconnects -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -119,7 +121,7 @@
     }
 
     /* Sections */
-    section{padding-block:clamp(36px,7vw,80px)}
+    section{padding-block:clamp(24px,5vw,60px)}
     h2{font-size:clamp(28px,5.5vw,48px); margin:0 0 8px}
     .lead{color:var(--muted); margin-top:-2px}
     .grid{display:grid; gap:18px}
@@ -176,6 +178,8 @@
       </div>
       <nav aria-label="Primary">
         <a href="#about">About</a>
+        <a href="#vision">Leona's Vision</a>
+        <a href="#voter-info">Voter Info</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -192,7 +196,7 @@
           <div class="label">Your Voice Matters</div>
           <div class="cta">
             <a class="btn" href="#contact">Contact Leona</a>
-            <a class="btn secondary" href="https://www.facebook.com/profile.php?id=61578824399349" target="_blank" rel="noopener noreferrer">Find me on Facebook</a>
+            <a class="btn secondary" href="#voter-info">Where &amp; When to Vote</a>
           </div>
         </div>
 
@@ -211,14 +215,42 @@
       <div class="container grid two">
         <div class="card">
           <h2>About Leona</h2>
-          <p>Leona Bertagnolli has lived, worked, farmed, and raised her family in Clearwater County for over three decades. She believes in practical, commonsense decisions that support agriculture and small business while protecting what makes our communities special.</p>
-          <p>Her priorities are straightforward: listen to residents, keep council accountable, and focus on responsible growth so Clearwater County stays a place we’re proud to call home.</p>
+          <p>Leona Bertagnolli has been a proud resident of Clearwater County for over 35 years, living and working on her family’s century-old heritage farm, originally homesteaded in 1907. She continues that legacy today, producing and selling hay for the equine market while maintaining a deep connection to the land and her community.</p>
+          <p>With a professional background in office administration and accounting, Leona has extensive experience in cost control, procurement, budgeting, and daily cost tracking within the oil and gas industry. Beyond her professional career, she’s been a dedicated community volunteer for decades—Project Manager for the Cookie Jar Playschool building project, Treasurer for Early Childhood Development Kindergarten, nine years on the Rocky Gas Co-Op Board, service on the joint Town and County Recreation Board, years of coaching figure skating, and assisting low‑income seniors through the Community Volunteer Income Tax Program at FCSS.</p>
+          <p>Leona raised three children into responsible and caring adults and is guided by three key principles in all that she does: <strong>Integrity, Stewardship, and Accountability</strong>.</p>
           <p class="lead"><strong>Ward:</strong> 3 • <strong>Location:</strong> Clearwater County, Alberta</p>
         </div>
         <div class="card">
           <div class="about-headshot">
             <img src="assets/LeonaBertagnolli_profilepic.jpg" alt="Leona Bertagnolli headshot" loading="lazy" decoding="async">
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="vision">
+      <div class="container">
+        <div class="card">
+          <h2>Leona’s Vision for Clearwater County</h2>
+          <p class="lead">Practical leadership, collaboration, and a commitment to residents so families, seniors, and businesses can thrive.</p>
+          <ul>
+            <li><strong>Affordability &amp; Job Creation:</strong> Promote local business development and opportunities for youth to gain work experience, help families stay in their homes, and support seniors to live comfortably.</li>
+            <li><strong>Crime &amp; Community Safety:</strong> Advocate for increased policing resources and stronger collaboration with law enforcement to address crime and reduce catch‑and‑release impacts.</li>
+            <li><strong>Communication &amp; Transparency:</strong> Improve two‑way communication—clear updates from the County and active listening to constituent concerns.</li>
+            <li><strong>Stewardship &amp; Growth:</strong> Protect our rural character and natural beauty while planning responsibly for growth and collaborating with neighbouring municipalities.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="voter-info">
+      <div class="container">
+        <div class="card">
+          <h2>Voter Information</h2>
+          <p><strong>Election Day:</strong> Monday, October 20, 2025</p>
+          <p><strong>Voting Hours:</strong> 10:00 AM – 8:00 PM</p>
+          <p><strong>Where to Vote:</strong> Rocky Regional Recreation Centre, Arbutus Hall, Condor Hall, Leslieville Hall, and Evergreen Hall</p>
+          <p class="small">Have questions about eligibility or ID? Visit the <a href="https://www.clearwatercounty.ca/p/voter-information" target="_blank" rel="noopener noreferrer">Clearwater County Voter Information page</a> or contact Leona for guidance.</p>
         </div>
       </div>
     </section>
@@ -232,7 +264,7 @@
               <a href="tel:+14038465840">📞 <span class="num">403-846-5840</span></a>
             </li>
             <li>
-              <a href="mailto:leonazone3@gmail.com">✉️ leonazone3@gmail.com</a>
+              <a href="mailto:leonazone3@gmail.com" target="_blank" rel="noopener noreferrer">✉️ leonazone3@gmail.com</a>
             </li>
             <li>
               <a href="https://www.facebook.com/profile.php?id=61578824399349" target="_blank" rel="noopener noreferrer">🌐 Facebook</a>
